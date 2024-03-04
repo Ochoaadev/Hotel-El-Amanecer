@@ -6,15 +6,26 @@ var connection = require('./src/config/conexion')
 const { swaggerDocs } = require("./swagger");
 const fs = require('fs')
 const multer = require("multer");
+const bodyParser = require('body-parser');
 
 var indexRouter = require('./src/routes/routes');
 
 var app = express();
 
+// Habilitar CORS para todas las rutas
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //
 

@@ -8,7 +8,7 @@ const reserva = new mongoose.Schema(
         },
         Nombre_Apellido:{
             type:String,
-            required: true
+            required: true  
         },
         Email:{
             type:String,

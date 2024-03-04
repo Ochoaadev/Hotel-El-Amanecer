@@ -9,4 +9,4 @@ const { AggReservas } = require("../controllers/ControllersReserva");
 
 router.post("/Add_Reservas", AggReservas);
 
-module.export = router;
+module.exports = router;
