@@ -1,4 +1,4 @@
-const model = require("../models/reserva");
+const model = require("../models/Reserva");
 
 const AggReservas = async(req, res) => {
    try {
