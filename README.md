@@ -9,9 +9,11 @@
 
 # Comandos
   - BackEnd:
+    
     ```bash
       npm run dev
   - FrontEnd:
+    
     ```bash
       npm run dev
 
@@ -34,15 +36,26 @@ A continuación, se describiran los pasos a seguir para ejecutar el proyecto
 
 # Backend
 
-El primer paso es abrir la consola de visual studio con la combinación "ctrl + ñ", y escribir el siguiente comando: cd Hotel-El-Amanecer.
+1. El primer paso es abrir la consola de visual studio con la combinación "ctrl + ñ", y escribir el siguiente comando: 
+   
+     ```bash
+        cd Hotel-El-Amanecer
 
-Ubicarse en la carpeta de Backend, con el siguiente comando: "cd Backend"
+2. Ubicarse en la carpeta de Backend, con el siguiente comando: 
+    
+     ```bash
+      cd Backend
 
-Ejecutar el siguiente comando: "npm i" para instalar todas las dependencias correspondientes a Node Js.
+3. Ejecutar el siguiente comando:
 
-Luego, se proceder a ejecutar npm run dev, comando que ejecutará el servidor.
+    ```bash
+      npm i 
+      
+  Para instalar todas las dependencias correspondientes a Node Js.
 
-Al terminar de ejecutar mostrará el siguiente mensaje, si la conexión es satisfactoria.
+4. Luego, se proceder a ejecutar npm run dev, comando que ejecutará el servidor.
+
+5. Al terminar de ejecutar mostrará un mensaje si la conexión es satisfactoria.
 
 En caso de presentar problemas, verificar que todas las dependencias estén instaladas y tenga los parámetros correctos en el archivo .env
 
@@ -50,17 +63,21 @@ En caso de presentar problemas, verificar que todas las dependencias estén inst
 
 FrontEnd
 
-Primero que todo debes usar el comando “ctrl+ñ” para poder abrir la terminal del proyecto.
+1. Primero que todo debes usar el comando “ctrl+ñ” para poder abrir la terminal del proyecto.
 
-Ahora escribe “ls” para acceder a las carpetas y “cd Hotel-El-Amanecer” para acceder a las carpetas de FrontEnd/BackEnd.
+2. Ahora escribe “ls” para acceder a las carpetas y “cd Hotel-El-Amanecer” para acceder a las carpetas de FrontEnd/BackEnd.
 
-Ahora escribe de nuevo “ls” para acceder a las carpetas y “cd FrontE” para acceder a la carpeta de FrontEnd.
+3. Ahora escribe de nuevo “ls” para acceder a las carpetas y “cd FrontEnd” para acceder a la carpeta de FrontEnd.
 
-Ahora tienes que escribir el comando “npm i” para poder instalar todas las dependencias necesarias para que el proyecto funcione.
+4. Ahora tienes que escribir el comando:
+   
+   ```bash
+      npm i
+  Para poder instalar todas las dependencias necesarias para que el proyecto funcione.
 
-Ya con todo instalado, ¡estamos casi listos!
+5. Ya con todo instalado, ¡estamos casi listos!
 
-Solo te faltaría escribir el comando “npm run dev” para poder encender el servidor.
+6. Solo te faltaría poder encender el servidor escribiendo el comando mismo comando que en el backend “npm run dev”.
 
 Ahora solo tienes que copiar el enlace que se te da por consola en tu buscador, ¡y ya puedes empezar a disfrutar de la app!
 
