@@ -8,12 +8,16 @@
 - Zeuddy Segovia 29.825.546
 
 # Comandos
-  - BackEnd: npm run dev
-  - FrontEnd: npm run dev
+  - BackEnd:
+    ```bash
+      npm run dev
+  - FrontEnd:
+    ```bash
+      npm run dev
 
 # Profesor
 
-  Freddy Ramirez
+  Ing. Freddy Ramirez
 
 # Funcionalidades
 
@@ -63,4 +67,7 @@ Ahora solo tienes que copiar el enlace que se te da por consola en tu buscador, 
 # Video explicando código
 
 https://www.youtube.com/watch?v=GU4Xgk7Dgww
-# 
+
+# Figma
+
+https://www.figma.com/file/W9wPQs71qT7Z85x70ChfLY/Hotel-El-Amanecer?type=design&node-id=0%3A1&mode=design&t=IPMBQBhixaQRdRG3-1
