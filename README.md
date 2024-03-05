@@ -59,3 +59,8 @@ Ya con todo instalado, ¡estamos casi listos!
 Solo te faltaría escribir el comando “npm run dev” para poder encender el servidor.
 
 Ahora solo tienes que copiar el enlace que se te da por consola en tu buscador, ¡y ya puedes empezar a disfrutar de la app!
+
+# Video explicando código
+
+https://www.youtube.com/watch?v=GU4Xgk7Dgww
+# 
