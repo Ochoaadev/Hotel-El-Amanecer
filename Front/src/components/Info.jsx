@@ -20,7 +20,7 @@ function Info() {
       >
         <div className="flex flex-col gap-8 text-center">
           <motion.h1
-            className="text-6xl grid font-bold md:text-6xl loading-[6,5rem]"
+            className="text-4xl grid font-bold md:text-6xl loading-[6,5rem]"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
@@ -29,7 +29,7 @@ function Info() {
             <span className="text-marron py-2 px-6">El Amanecer</span>{" "}
           </motion.h1>
           <motion.p
-            className="font-bold text-black text-xl md:text-2xl leading-[3rem]"
+            className="font-bold text-black text-lg md:text-2xl leading-10 md:leading-[3rem]"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.5 }}
@@ -37,13 +37,13 @@ function Info() {
             Sumérgete en nuestras instalaciones acogedoras y cómodas para disfrutar de una experiencia excepcional e inolvidable
           </motion.p>
           <motion.div
-            className="flex items-center justify-center"
+            className="flex items-center justify-center w-full md:w-auto"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.5 }}
           >
             <motion.button
-              className="bg-marron text-white py-2 px-6 font-bold rounded-xl text-xl"
+              className="bg-marron text-white py-2 px-6 font-bold rounded-xl text-md md:text-xl"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

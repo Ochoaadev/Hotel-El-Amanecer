@@ -26,8 +26,8 @@ function Header() {
 
   return (
     <>
-      <header className="bg-oscuro flex items-center justify-between xl:justify-start w-full py-4 px-8 h-[14vh] z-50">
-        <div className="xl:w-1/5 text-center">
+      <header className="bg-oscuro flex items-center justify-center xl:justify-start w-full py-4 px-8 h-[14vh] z-50">
+        <div className="w-3/4 md:w-2/3 xl:w-1/5 text-center">
           <button className="text-2xl font-bold p-1 sm:p-3 md:p-6" onClick={handleOpenHome}>
             <img src={Logo} alt="El amanecer" />
           </button>
