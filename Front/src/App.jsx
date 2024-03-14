@@ -5,7 +5,7 @@ import UpProvider from "./contexts/UpProvider";
 import { AuthProvider, useAuth } from "./contexts/AuthProvider";
 import Home from "./routes/MiHotel"
 import FormularioReservas from "./routes/Formulario_Reservas";
-import InicioS from "./routes/Logeo"
+import InicioSs from "./routes/Logeo"
 import Registro from "./routes/Registro"
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
               <Route path="/AboutUs" element={<About />} />
               <Route path="/Servicios" element={<Service/>} />
               <Route path="/Reservas" element={<FormularioReservas />} />
-              <Route path="/Login" element={<InicioS />} />
+              <Route path="/Login" element={<InicioSs />} />
               <Route path="/Registro" element={<Registro />} />
             </Routes>
           </UpProvider>

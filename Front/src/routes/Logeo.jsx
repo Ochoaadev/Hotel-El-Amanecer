@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthProvider";
 import { useItemsContext, useUpItemsContext } from "../contexts/UpProvider";
 
-const InicioS = () => {
+const InicioSs = () => {
 
     const { setMessage, setStatus, handleOpenMessage } = useItemsContext();
 
@@ -133,4 +133,4 @@ const InicioS = () => {
  );
 };
 
-export default InicioS;
+export default InicioSs;

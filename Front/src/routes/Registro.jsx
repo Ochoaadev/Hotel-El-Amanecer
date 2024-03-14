@@ -51,43 +51,6 @@ function Registro(){
    const focusOnFirstEmptyInput = () => {
       return false;
    };
-   // const Add_Register = async (event) =>{
-   //    e.preventDefault();
-   //  const alert = await focusOnFirstEmptyInput();
-   //  if (alert === true) {
-   //    return;
-   //  }
-     
-   //    const Data_Json = {
-   //       "name": InputName,
-   //       "email": InputEmail,
-   //       "password": InputPassword,
-   //       "lastname": InputLastName,
-   //       "username": InputUserName,
-   //       "gender": InputEmail
-   //    }
-   //    if (alert === true) {
-   //       return;
-   //    }
-   //    console.log(Data_Json);
-
-   //   const response = await fetch(import.meta.env.VITE_URL_REGISTER, {
-   //   method: "POST",
-   //   headers: {
-   //    'Content-Type': 'application/json'
-   // },
-   // body: JSON.stringify(Data_Json),
-   // });
-   // const data = await response.json();
-   // if (data.status != 200) {
-   //    await setMessage(response.data.message);
-   //    await setStatus(response.data.status);
-   //    await handleOpenMessage();
-   // }
-   // navigate(response.ruta);
-
-   // }
-
 
    const Add_Register = async (e) => {
       e.preventDefault();

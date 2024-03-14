@@ -43,10 +43,10 @@ const handleRegister = () =>{
              top-0 xl:static flex-1 flex flex-col xl:flex-row items-center gap-10 justify-center transition-all duration-500 z-50 mr-[10rem]`}
         >
           <button className="font-bold text-blanco" onClick={handleOpenHome}>Inicio </button>
-          <button className="font-bold text-blanco" onClick={handleOpenAbutUs}>Sobre Nosotros</button>
-          <button className="font-bold text-blanco" onClick={handleOpenservices}>Servicios</button>
-          <button className="font-bold text-blanco" onClick={handleLogin}>Iniciar Sesión</button>
-          <button className="font-bold text-blanco" onClick={handleRegister}>Registrarse</button>
+          <button className="font-bold text-blanco" onClick={handleOpenAbutUs}>Sobre Nosotros </button>
+          <button className="font-bold text-blanco" onClick={handleOpenservices}>Servicios </button>
+          <button className="font-bold text-blanco" onClick={handleLogin}>Iniciar Sesión </button>
+          <button className="font-bold text-blanco" onClick={handleRegister}>Registrarse </button>
         </nav>
         <button onClick={() => SetshowMenu(!showMenu)} className="xl:hidden text-2xl p-2">
           {showMenu ? <RiCloseFill /> : <RiMenu3Line />}

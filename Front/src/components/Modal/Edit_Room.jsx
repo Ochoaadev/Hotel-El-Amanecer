@@ -35,7 +35,7 @@ const [Tipo, setTipo] = useState(habitacionId.Tipo);
         formData.append('Review', Review);
 
         try {
-            const response = await fetch(import.meta.env.VITE_URL_DELETEROOM, {
+            const response = await fetch(`http://localhost:4000//habitaciones/${id}`, {
                 method: 'PUT',
                 body: formData,
                 headers: {

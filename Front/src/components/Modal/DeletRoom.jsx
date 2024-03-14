@@ -17,7 +17,7 @@ const Delete = ({ habitacionId }) => {
 
     const handleDelete = async () => {
         try {
-            const response = await fetch(import.meta.env.VITE_URL_DELETEROOM, {
+            const response = await fetch(`http://localhost:4000/habitaciones/${habitacionId._id}`, {
                 method: 'DELETE',
             });
             if (response.ok) {

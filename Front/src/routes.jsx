@@ -5,7 +5,7 @@ import About from "./components/AboutUs";
 import Service from "./components/services";
 import Advanced from './components/Benf'
 import App from "./App";
-import InicioS from './routes/Logeo'
+import InicioSs from './routes/Logeo'
 import Registro from './routes/Registro'
 
 
@@ -32,7 +32,7 @@ export const router = createBrowserRouter([
     },
     {
         path: '/Login',
-        element: <InicioS/>
+        element: <InicioSs/>
     },
     {
         path: '/Registro',
