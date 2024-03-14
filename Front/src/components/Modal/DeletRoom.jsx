@@ -17,8 +17,15 @@ const Delete = ({ habitacionId }) => {
 
     const handleDelete = async () => {
         try {
-            const res = await axios.delete(`http://localhost:4000/rooms/${habitacionId._id}`);
-            console.log(res.data);
+            const response = await fetch(`http://localhost:4000/habitaciones/${habitacionId._id}`, {
+                method: 'DELETE',
+            });
+            if (response.ok) {
+                const data = await response.json();
+                console.log(data);
+            } else {
+                console.log('Error:', response.status);
+            }
         } catch (err) {
             console.log(err);
         }

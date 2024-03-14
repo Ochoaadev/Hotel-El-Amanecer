@@ -27,6 +27,7 @@ router.delete("/habitaciones/:id", EliminarHabit);
 
 //Registro y logeo
 router.post("/registro", registro);
+
 router.post("/login", login);
 
 //Usuarios
