@@ -5,7 +5,8 @@ import UpProvider from "./contexts/UpProvider";
 import { AuthProvider, useAuth } from "./contexts/AuthProvider";
 import Home from "./routes/MiHotel"
 import FormularioReservas from "./routes/Formulario_Reservas";
-// import Room from './routes/Room';
+import InicioS from "./routes/Logeo"
+import Registro from "./routes/Registro"
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
               <Route path="/AboutUs" element={<About />} />
               <Route path="/Servicios" element={<Service/>} />
               <Route path="/Reservas" element={<FormularioReservas />} />
+              <Route path="/Login" element={<InicioS />} />
+              <Route path="/Registro" element={<Registro />} />
             </Routes>
           </UpProvider>
         </BrowserRouter>

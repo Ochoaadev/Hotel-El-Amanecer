@@ -173,7 +173,7 @@ export default function UpProvider({ children }) {
   const [usuarios, setUsuarios] = useState([]);
 
   const Usuarios = async () => {
-    const res = await fetch("http://localhost:4000/User");
+    const res = await fetch(import.meta.env.VITE_URL_LISTAR_USER);
     const data = await res.json();
     await setUsuarios(data);
   };

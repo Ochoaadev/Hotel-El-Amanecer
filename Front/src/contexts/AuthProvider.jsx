@@ -36,7 +36,7 @@ export const AuthProvider = ({ children }) => {
     } else {
       setUser(null);
       setIsAuthenticated(false);
-      return { ruta: "/Register", data: data };
+      return { ruta: "/Registro", data: data };
     }
   };
 
@@ -60,7 +60,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const logout = () => {
-    sessionStorage.removeItem("token");
+    sessionStorage.removeItem("token"); 
     setUser(null);
     setIsAuthenticated(false);
   };
@@ -75,7 +75,7 @@ export const AuthProvider = ({ children }) => {
       }
 
       try {
-        const response = await fetch("http://localhost:4000/Validate", {
+        const response = await fetch(import.meta.env.VITE_URL_VALIDATION, {
           method: "POST",
           headers: {
             Authorization: `Bearer ${token}`,

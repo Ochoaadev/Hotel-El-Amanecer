@@ -35,13 +35,20 @@ const [Tipo, setTipo] = useState(habitacionId.Tipo);
         formData.append('Review', Review);
 
         try {
-            const res = await axios.put(`http://localhost:4000//rooms/${id}`, formData, {
+            const response = await fetch(import.meta.env.VITE_URL_DELETEROOM, {
+                method: 'PUT',
+                body: formData,
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
             });
-
-            console.log(res.data);
+        
+            if (response.ok) {
+                const data = await response.json();
+                console.log(data);
+            } else {
+                console.log('Error:', response.status);
+            }
         } catch (err) {
             console.log(err);
         }

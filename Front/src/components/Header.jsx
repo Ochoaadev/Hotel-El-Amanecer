@@ -19,6 +19,13 @@ function Header() {
   const handleOpenservices = () => {
     navigate("/Servicios");
   };
+  const handleLogin = () =>{
+    navigate("/Login")
+}
+
+const handleRegister = () =>{
+    navigate("/Registro")
+}
 
   const [showMenu, SetshowMenu] = useState(false);
 
@@ -38,7 +45,8 @@ function Header() {
           <button className="font-bold text-blanco" onClick={handleOpenHome}>Inicio </button>
           <button className="font-bold text-blanco" onClick={handleOpenAbutUs}>Sobre Nosotros</button>
           <button className="font-bold text-blanco" onClick={handleOpenservices}>Servicios</button>
-          <button className="font-bold text-blanco" onClick={handleOpenForm}>Reservación</button>
+          <button className="font-bold text-blanco" onClick={handleLogin}>Iniciar Sesión</button>
+          <button className="font-bold text-blanco" onClick={handleRegister}>Registrarse</button>
         </nav>
         <button onClick={() => SetshowMenu(!showMenu)} className="xl:hidden text-2xl p-2">
           {showMenu ? <RiCloseFill /> : <RiMenu3Line />}

@@ -5,6 +5,8 @@ import About from "./components/AboutUs";
 import Service from "./components/services";
 import Advanced from './components/Benf'
 import App from "./App";
+import InicioS from './routes/Logeo'
+import Registro from './routes/Registro'
 
 
 export const router = createBrowserRouter([
@@ -27,5 +29,13 @@ export const router = createBrowserRouter([
     {
         path: '/Benf',
         element: <Advanced/>
+    },
+    {
+        path: '/Login',
+        element: <InicioS/>
+    },
+    {
+        path: '/Registro',
+        element: <Registro/>
     }
 ])
