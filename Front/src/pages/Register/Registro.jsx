@@ -24,12 +24,12 @@ function Registro() {
 
 
   //Estableciendo datos
-  const [InputName, SetInputName] = useState();
-  const [InputLastName, SetInputLastName] = useState();
-  const [InputEmail, SetInputEmail] = useState();
-  const [InputUserName, SetInputUserName] = useState();
-  const [InputPassword, SetInputPassword] = useState();
-  const [InputGender, SetInputGender] = useState();
+  const [InputName, SetInputName] = useState("");
+  const [InputLastName, SetInputLastName] = useState("");
+  const [InputEmail, SetInputEmail] = useState("");
+  const [InputUserName, SetInputUserName] = useState("");
+  const [InputPassword, SetInputPassword] = useState("");
+  const [InputGender, SetInputGender] = useState("");
 
   const HandleInputName = (event) => {
     SetInputName(event.target.value);
@@ -55,18 +55,18 @@ function Registro() {
 
   const Add_Register = async (e) => {
     e.preventDefault();
-    const alert = await focusOnFirstEmptyInput();
+    const alert = focusOnFirstEmptyInput();
     if (alert === true) {
       return;
     }
 
     const data_register = {
-      "name": InputName,
-      "email": InputEmail,
-      "password": InputPassword,
-      "lastname": InputLastName,
-      "username": InputUserName,
-      "gender": InputEmail
+      "Name": InputName,
+      "Email": InputEmail,
+      "Password": InputPassword,
+      "Lastname": InputLastName,
+      "Username": InputUserName,
+      "Gender": InputGender
     };
 
     const response = await signup(data_register);
@@ -175,6 +175,7 @@ function Registro() {
                 value={InputGender}
                 onChange={HandleInputGender}
               >
+                <option value="...">...</option>
                 <option value="masculino">Masculino</option>
                 <option value="femenino">Femenino</option>
                 <option value="otro">Otro</option>
@@ -193,9 +194,9 @@ function Registro() {
               </button>
               <button
                 type="submit"
-                onClick={(event) => {
-                  Add_Register(event);
-                  setUpdate(true);
+                onClick={(e) => {
+                  Add_Register(e)
+                  update(true);
                 }}
                 className="hover:bg-gray-600 mt-5 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-oscuro rounded-lg group bg-gradient-to-br from-crema to-marron group-hover:from-crema group-hover:to-marron hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800"
               >

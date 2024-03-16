@@ -2,9 +2,15 @@ import { Link } from 'react-router-dom';
 import { RiMenu3Line, RiCloseFill } from 'react-icons/ri';
 import { useState } from "react";
 import LogoSVG from './Icon/logo';
+import { useAuth } from '../contexts/AuthProvider';
 
 function Header() {
 
+  const {user, isAuthenticated, logout} = useAuth();
+
+  const handleLogout = ()=>{
+    logout()
+  }
   const [showMenu, SetshowMenu] = useState(false);
 
   return (
@@ -23,13 +29,23 @@ function Header() {
         <nav className={`fixed bg-oscuro w-4/5 md:w-2/5 h-full ${showMenu ? "left-0" : "-left-full"}
              top-0 xl:static flex-1 flex flex-col xl:flex-row items-center gap-10 justify-center transition-all duration-500 z-50`}
         >
-          <Link className="font-bold text-blanco" to={"/"}>Inicio </Link>
+          <Link className="font-bold text-blanco" to={"/"}>Inicio </Link>        
           <Link className="font-bold text-blanco" to={"/AboutUs"}>Sobre Nosotros </Link>
-          <Link className="font-bold text-blanco" to={"/Servicios"}>Servicios </Link>
-          <div className="flex justify-center flex-col xl:flex-row gap-6 xl:gap-3">
-            <Link className="bg-white text-oscuro rounded-lg xl:rounded-xl border border-transparent hover:bg-oscuro hover:text-claro hover:border-claro py-2 px-4 font-bold text-center transition-all duration-300 ease-in-out transform" to={"/Login"}>Iniciar Sesión</Link>
-            <Link className="bg-marron text-blanco rounded-lg xl:rounded-xl border border-transparent hover:bg-crema hover:text-oscuro hover:border-crema py-2 px-4 font-bold text-center transition-all duration-300 ease-in-out transform" to={"/Registro"}>Registrarse</Link>
-          </div>
+          <Link className="font-bold text-blanco" to={"/Reservas"}>Realizar una reserva </Link>
+          {(location.pathname === "/" || location.pathname === "/Listar_Reservas" || location.pathname === "/Home"  || location.pathname === "/Habitaciones") && user && user.Rol == "Admin" ? (
+                <>
+              <Link className="font-bold text-blanco" to={"/Servicios"}>Servicios </Link>
+                </>
+                ) : null}
+          
+          {isAuthenticated ? (
+                        <button onClick={handleLogout} className="bg-marron text-blanco rounded-lg xl:rounded-xl border border-transparent hover:bg-crema hover:text-oscuro hover:border-crema py-2 px-4 font-bold text-center transition-all duration-300 ease-in-out transform">Cerrar sesión</button>
+                    ) : (
+                      <div className="flex justify-center flex-col xl:flex-row gap-6 xl:gap-3">
+                      <Link className="bg-white text-oscuro rounded-lg xl:rounded-xl border border-transparent hover:bg-oscuro hover:text-claro hover:border-claro py-2 px-4 font-bold text-center transition-all duration-300 ease-in-out transform" to={"/Login"}>Iniciar Sesión</Link>
+                      <Link className="bg-marron text-blanco rounded-lg xl:rounded-xl border border-transparent hover:bg-crema hover:text-oscuro hover:border-crema py-2 px-4 font-bold text-center transition-all duration-300 ease-in-out transform" to={"/Registro"}>Registrarse</Link>
+                    </div>
+                    )}
         </nav>
         <button onClick={() => SetshowMenu(!showMenu)} className={`xl:hidden text-2xl sm:text-3xl md:text-4xl lg:text-5xl p-2 transition-all duration-300 ease-in-out transform ${showMenu ? 'rotate-180' : 'rotate-0'}`}>
           {showMenu

@@ -25,20 +25,20 @@ const InicioSs = () => {
   }, [isAuthenticated]);
 
   // Estableciendo los estados de los datos
-  const [username, setUserName] = useState("");
-  const [password, setPassword] = useState("");
+  const [Username, setUserName] = useState("");
+  const [Password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
 
   // Inputs sin contenidos
   const focusOnFirstEmptyInput = () => {
-    if (username == "") {
+    if (Username == "") {
       document.getElementById("username").focus();
       setErrorMessage("Por favor, ingrese su nombre de usuario.");
       return true;
     }
 
-    if (password == "") {
+    if (Password == "") {
       document.getElementById("password").focus();
       setErrorMessage("Por favor, ingrese su contraseña.");
       return true;
@@ -58,8 +58,8 @@ const InicioSs = () => {
     }
 
     const data_login = {
-      username,
-      password,
+       Username,
+       Password,
     };
 
     //Solicitud al backend
@@ -107,7 +107,7 @@ const InicioSs = () => {
                 id="username"
                 type="text"
                 placeholder="Username"
-                value={username}
+                value={Username}
                 onChange={(e) => setUserName(e.target.value)}
               />
             </div>
@@ -120,7 +120,7 @@ const InicioSs = () => {
                 id="password"
                 type="password"
                 placeholder="*********"
-                value={password}
+                value={Password}
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
