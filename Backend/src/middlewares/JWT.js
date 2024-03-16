@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-
+require('dotenv').config();
 // json web token (JWT)
 
 function GenerarToken(payload) {

@@ -4,11 +4,11 @@ const { GenerarToken } = require('../../middlewares/JWT');
 
 const registro = async (req, res) => {
   console.log(req.body);
-  let rol = "";
+  let Rol = "";
   if (req.body.Rol == "Admin") {
-    rol = "Admin";
+    Rol = "Admin";
   } else {
-    rol = "User";
+    Rol = "User";
   }
   try {
     const { Name, Lastname, Email, Password, Username, Gender } =
@@ -40,7 +40,6 @@ const registro = async (req, res) => {
     try {
       //Se procede a guardar
       await data.save();
-      //En tal caso todo haya salido bien
 
       const datas = async (dato) => {
         const documents = await model.find({ username: Username });
@@ -50,13 +49,13 @@ const registro = async (req, res) => {
       const getdata = await datas(Username);
 
       const payload = {
-        userId: getdata[0]._id,
+        userId: getdata[0]?._id,
         Username,
         Email,
         Rol,
       };
       const token = GenerarToken(payload);
-
+      
       if (!data) {
         return res
           .status(404)
@@ -65,7 +64,7 @@ const registro = async (req, res) => {
 
       res
         .status(200)
-        .json({ payload, message: "Registro Exitoso", token, status: 200 });
+        .json({ payload, token,message: "Registro Exitoso", status: 200 });
     } catch (error) {
       //Caso contrario
       console.log("Error", error);
@@ -80,7 +79,7 @@ const login = async (req, res) => {
   try {
     const { Username, Password } = req.body;
     if (!Username || !Password) {
-      return res.status(400).json({ message: "Faltan datos", status: 400 });
+      return res.status(400).json({ message: "Datos Incorrectos, intentalo nuevamente", status: 400 });
     }
 
     const datas = async (dato) => {
