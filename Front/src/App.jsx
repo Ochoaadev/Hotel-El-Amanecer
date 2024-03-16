@@ -1,12 +1,12 @@
-import About from './components/AboutUs'
-import Service from './components/services'
+import About from './pages/AboutUs/AboutUs'
+import Service from './pages/Services/services'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import UpProvider from "./contexts/UpProvider";
 import { AuthProvider, useAuth } from "./contexts/AuthProvider";
-import Home from "./routes/MiHotel"
-import FormularioReservas from "./routes/Formulario_Reservas";
-import InicioSs from "./routes/Logeo"
-import Registro from "./routes/Registro"
+import Home from "./pages/Home/MiHotel"
+import FormularioReservas from "./pages/Reserva/Formulario_Reservas";
+import InicioSs from "./pages/Login/Logeo"
+import Registro from "./pages/Register/Registro"
 
 function App() {
   return (

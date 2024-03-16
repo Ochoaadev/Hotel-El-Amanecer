@@ -1,41 +1,35 @@
-import React from "react";
 import { createBrowserRouter } from "react-router-dom";
-import Form_reservas from "./routes/Formulario_Reservas";
-import About from "./components/AboutUs";
-import Service from "./components/services";
-import Advanced from './components/Benf'
+import Form_reservas from "./pages/Reserva/Formulario_Reservas";
+import About from "./pages/AboutUs/AboutUs";
+import Service from "./pages/Services/services";
 import App from "./App";
-import InicioSs from './routes/Logeo'
-import Registro from './routes/Registro'
+import InicioSs from './pages/Login/Logeo'
+import Registro from './pages/Register/Registro'
 
 
 export const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <App />,
-    },
-    {
-        path: '/formulario_reservas',
-        element: <Form_reservas/>
-    },
-    {
-        path: '/AboutUs',
-        element: <About/>
-    },
-    {
-        path: '/services',
-        element: <Service/>
-    },
-    {
-        path: '/Benf',
-        element: <Advanced/>
-    },
-    {
-        path: '/Login',
-        element: <InicioSs/>
-    },
-    {
-        path: '/Registro',
-        element: <Registro/>
-    }
+  {
+    path: '/',
+    element: <App />,
+  },
+  {
+    path: '/formulario_reservas',
+    element: <Form_reservas />
+  },
+  {
+    path: '/AboutUs',
+    element: <About />
+  },
+  {
+    path: '/services',
+    element: <Service />
+  },
+  {
+    path: '/Login',
+    element: <InicioSs />
+  },
+  {
+    path: '/Registro',
+    element: <Registro />
+  }
 ])
