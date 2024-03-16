@@ -5,6 +5,7 @@ import Footer from '../../components/Footer'
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthProvider";
 import { useItemsContext, useUpItemsContext } from "../../contexts/UpProvider";
+import { motion } from 'framer-motion';
 
 const InicioSs = () => {
 
@@ -79,11 +80,24 @@ const InicioSs = () => {
       <Message />
       <Header />
       <div className="w-full max-w-5xl flex justify-center items-center m-auto mt-20 mb-28">
-        <div className="bg-crema shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <motion.div
+          className="bg-crema shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.5 }}
+        >
           <h1 className="text-center text-2xl mb-5">
             Iniciar Sesión
           </h1>
-          <form onSubmit={handleSubmit} className='bg-crema'>
+          <motion.form
+            onSubmit={handleSubmit}
+            className='bg-crema'
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+          >
             <div className="mb-4">
               <label className="block text-oscuro text-sm font-bold mb-2" htmlFor="username">
                 Username
@@ -125,8 +139,8 @@ const InicioSs = () => {
                 Registrarse
               </Link>
             </div>
-          </form>
-        </div>
+          </motion.form>
+        </motion.div>
       </div>
       <Footer />
     </>

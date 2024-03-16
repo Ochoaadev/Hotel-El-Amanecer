@@ -5,6 +5,7 @@ import Footer from "../../components/Footer";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthProvider";
 import { useItemsContext, useUpItemsContext } from "../../contexts/UpProvider";
+import { motion } from 'framer-motion';
 
 function Registro() {
   const { setMessage, setStatus, handleOpenMessage } = useItemsContext();
@@ -82,11 +83,23 @@ function Registro() {
       <Message />
       <Header />
       <div className="min-h-screen flex items-center justify-center font-sans">
-        <div className="bg-crema xl:mt-8 p-8 rounded-lg shadow-md w-full max-w-md">
+        <motion.div
+          className="bg-crema xl:mt-8 p-8 rounded-lg shadow-md w-full max-w-md"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.5 }}
+        >
           <h1 className="text-3xl text-center font-semibold mb-8">
             Registro de Usuario
           </h1>
-          <form action="" className="bg-white shadow-md rounded-xl px-8 pt-6 pb-8 mb-4">
+          <motion.form
+            className="bg-white shadow-md rounded-xl px-8 pt-6 pb-8 mb-4"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+          >
             <div className="flex flex-col mb-4">
               <label htmlFor="Name" className="mb-2 font-semibold">
                 Nombre:
@@ -191,8 +204,8 @@ function Registro() {
                 </span>
               </button>
             </div>
-          </form>
-        </div>
+          </motion.form>
+        </motion.div>
       </div>
       <Footer />
     </>
