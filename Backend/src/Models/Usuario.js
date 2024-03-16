@@ -19,11 +19,6 @@ const users = new mongoose.Schema(
             type: String,
             required: true
         },
-        Phone:{
-            type: String,
-            unique: true,
-            required: false,
-        },
         Rol:{
             type: String,
             required: true
