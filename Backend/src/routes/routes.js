@@ -13,6 +13,14 @@ const {Obten_User, Eliminar_User, Edit_User, ActPassword, Listar_Users} = requir
 
 //                                                          <----Rutas---->
 const {crearReseña, obtenerReseñas, eliminarReseña} = require('../controllers/ControllersrReview') 
+
+//Reseñas
+router.get('/Reviews', obtenerReseñas);
+
+router.post("/Add_Reviews", crearReseña);
+
+router.delete('/Reviews/:id', eliminarReseña);
+
 //Reservas
 router.post("/Add_Reservas", AggReservas);
 
