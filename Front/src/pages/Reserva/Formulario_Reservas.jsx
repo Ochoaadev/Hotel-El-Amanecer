@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react";
-import Message from "../components/Modal/Message";
-import Header from '../components/Header';
-import Footer from '../components/Footer'
-import { useItemsContext, useUpItemsContext } from "../contexts/UpProvider";
+import Message from "../../components/Modal/Message";
+import Header from '../../components/Header';
+import Footer from '../../components/Footer'
+import { useItemsContext, useUpItemsContext } from "../../contexts/UpProvider";
 
 function Form_reservas (){
    const { setMessage, setStatus, handleOpenMessage } = useItemsContext();

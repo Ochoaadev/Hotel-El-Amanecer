@@ -12,6 +12,14 @@ const {AggHabit,ActualizarHabit, ListarHabit, EliminarHabit} = require('../contr
 const {Obten_User, Eliminar_User, Edit_User, ActPassword, Listar_Users} = require('../controllers/ControllersUser')
 
 //                                                          <----Rutas---->
+const {crearReseña, obtenerReseñas, eliminarReseña} = require('../controllers/ControllersReview') 
+
+//Reseñas
+router.get('/Reviews', obtenerReseñas);
+
+router.post("/Add_Reviews", crearReseña);
+
+router.delete('/Reviews/:id', eliminarReseña);
 
 //Reservas
 router.post("/Add_Reservas", AggReservas);

@@ -4,9 +4,9 @@ import { motion, useAnimation } from "framer-motion";
 
 function Carrusel() {
   const images = [
-    '../src/assets/Carrusel1.jpeg',
-    '../src/assets/Carrusel2.jpeg',
-    '../src/assets/Carrusel3.jpeg'
+    '../src/assets/Carrusel/Carrusel1.jpeg',
+    '../src/assets/Carrusel/Carrusel2.jpeg',
+    '../src/assets/Carrusel/Carrusel3.jpeg'
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

@@ -1,5 +1,5 @@
-import Header from './Header';
-import Footer from './Footer';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import { motion } from 'framer-motion';
 
 function Service() {
@@ -24,7 +24,7 @@ function Service() {
             transition={{ delay: 0.4, duration: 0.8 }}
           >
             <motion.img
-              src="../src/assets/Servicio1.jpeg"
+              src="../src/assets/services/Servicio1.jpeg"
               className='w-full rounded-3xl object-cover h-56'
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ function Service() {
             transition={{ delay: 1, duration: 0.8 }}
           >
             <motion.img
-              src="../src/assets/Servicio2.jpeg"
+              src="../src/assets/services/Servicio2.jpeg"
               className='w-full rounded-3xl object-cover h-56'
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -82,7 +82,7 @@ function Service() {
             transition={{ delay: 1.8, duration: 0.8 }}
           >
             <motion.img
-              src="../src/assets/Servicio3.jpeg"
+              src="../src/assets/services/Servicio3.jpeg"
               className='w-full rounded-3xl object-cover h-56'
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -115,7 +115,7 @@ function Service() {
             transition={{ delay: 2.6, duration: 0.8 }}
           >
             <motion.img
-              src="../src/assets/Servicio4.jpeg"
+              src="../src/assets/services/Servicio4.jpeg"
               className='w-full rounded-3xl object-cover h-56'
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
