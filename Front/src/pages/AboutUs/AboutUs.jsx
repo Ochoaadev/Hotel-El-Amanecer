@@ -40,7 +40,7 @@ function About() {
             transition={{ delay: 0.6, duration: 0.8 }}
           >
             <motion.img
-              src="../src/assets/Sobrenosotros1.jpeg"
+              src="../src/assets/AboutUs/Sobrenosotros1.jpeg"
               className="w-full object-cover rounded-3xl"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -85,7 +85,7 @@ function About() {
               transition={{ delay: 1.8, duration: 0.8 }}
             >
               <motion.img
-                src="../src/assets/Sobrenosotros2.jpeg"
+                src="../src/assets/AboutUs/Sobrenosotros2.jpeg"
                 className='w-full rounded-3xl object-cover h-56'
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -108,7 +108,7 @@ function About() {
               transition={{ delay: 2.4, duration: 0.8 }}
             >
               <motion.img
-                src="../src/assets/Sobrenosotros3.jpeg"
+                src="../src/assets/AboutUs/Sobrenosotros3.jpeg"
                 className='w-full rounded-3xl object-cover h-56'
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -131,7 +131,7 @@ function About() {
               transition={{ delay: 3, duration: 0.8 }}
             >
               <motion.img
-                src="../src/assets/Sobrenosotros4.jpeg"
+                src="../src/assets/AboutUs/Sobrenosotros4.jpeg"
                 className='w-full rounded-3xl object-cover h-56'
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -154,7 +154,7 @@ function About() {
               transition={{ delay: 3.6, duration: 0.8 }}
             >
               <motion.img
-                src="../src/assets/Sobrenosotros5.jpeg"
+                src="../src/assets/AboutUs/Sobrenosotros5.jpeg"
                 className='w-full rounded-3xl object-cover h-56'
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}

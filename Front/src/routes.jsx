@@ -4,8 +4,8 @@ import About from "./pages/AboutUs/AboutUs";
 import Service from "./pages/Services/services";
 import App from "./App";
 import InicioSs from './pages/Login/Logeo'
-import Registro from './pages/Register/Registro'
-
+import Registro from './pages/Register/Registro';
+import Rooms from "./pages/Rooms/Rooms";
 
 export const router = createBrowserRouter([
   {
@@ -23,6 +23,10 @@ export const router = createBrowserRouter([
   {
     path: '/services',
     element: <Service />
+  },
+  {
+    path: '/Rooms',
+    element: <Rooms />
   },
   {
     path: '/Login',

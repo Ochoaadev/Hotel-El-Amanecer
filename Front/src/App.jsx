@@ -7,6 +7,7 @@ import Home from "./pages/Home/MiHotel"
 import FormularioReservas from "./pages/Reserva/Formulario_Reservas";
 import InicioSs from "./pages/Login/Logeo"
 import Registro from "./pages/Register/Registro"
+import Rooms from './pages/Rooms/Rooms';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/AboutUs" element={<About />} />
               <Route path="/Servicios" element={<Service/>} />
+              <Route path="/Rooms" element={<Rooms/>} />
               <Route path="/Reservas" element={<FormularioReservas />} />
               <Route path="/Login" element={<InicioSs />} />
               <Route path="/Registro" element={<Registro />} />
