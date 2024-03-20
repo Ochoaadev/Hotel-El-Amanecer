@@ -4,12 +4,10 @@ var router = express.Router();
 //                                                      <----Controladores---->
 
 const { AggReservas } = require("../controllers/ControllersReserva");
-
 const {registro, login} = require('../controllers/Users/login-registro');
-
-const {AggHabit,ActualizarHabit, ListarHabit, EliminarHabit} = require('../controllers/ControllersHabit')
-
+const {AggHabit,ActualizarHabit, ListarHabit, ListarHabitFilter, EliminarHabit} = require('../controllers/ControllersHabit')
 const {Obten_User, Eliminar_User, Edit_User, ActPassword, Listar_Users} = require('../controllers/ControllersUser')
+const { Autenticacion, ValidarRol } = require("../middlewares/JWT");
 
 //                                                          <----Rutas---->
 const {crearReseña, obtenerReseñas, eliminarReseña} = require('../controllers/ControllersReview') 
@@ -27,6 +25,8 @@ router.post("/Add_Reservas", AggReservas);
 //Habitaciones
 router.get("/habitaciones", ListarHabit);
 
+router.get("/habitaciones/:filtro/:valor", ListarHabitFilter);
+
 router.post("/AggHabit", AggHabit);
 
 router.put("/habitaciones/:id", ActualizarHabit);
@@ -37,6 +37,9 @@ router.delete("/habitaciones/:id", EliminarHabit);
 router.post("/registro", registro);
 
 router.post("/login", login);
+
+//Validar Token
+router.post("/Validate", Autenticacion, ValidarRol);
 
 //Usuarios
 

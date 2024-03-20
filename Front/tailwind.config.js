@@ -17,6 +17,9 @@ export default {
         '4xl': '2rem',
         '5xl': '2.5rem',
       },
+      spacing: {
+        '19/20': '95%'
+      },
       colors: {
         blanco: "#FFFFFF",
         claro: "#F4EDEA",

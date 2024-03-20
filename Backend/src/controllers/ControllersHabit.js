@@ -36,6 +36,21 @@ const AggHabit = async (req, res) => {
 const ListarHabit = async (req, res) => {
   try {
     const room = await model.find();
+    console.log(room)
+    res.status(200).json(room);
+  } catch (erro) {
+    res.status(500).json({ message: 'Error al intentar listar las habitaciones', status: 500 })
+  }
+}
+
+const ListarHabitFilter = async (req, res) => {
+  try {
+    const { filtro, valor } = req.params;
+    //Expresion regular para el valor a buscar
+    const regex = new RegExp(valor, 'i');
+
+    const room = await model.find({ [filtro]: regex })
+    console.log(room)
     res.status(200).json(room);
   } catch (erro) {
     res.status(500).json({ message: 'Error al intentar listar las habitaciones', status: 500 })
@@ -97,4 +112,4 @@ const EliminarHabit = async (req, res) => {
   }
 };
 
-module.exports = { AggHabit, ListarHabit, ActualizarHabit, EliminarHabit };
+module.exports = { AggHabit, ListarHabit, ListarHabitFilter, ActualizarHabit, EliminarHabit };

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {useAuth} from '../../contexts/AuthProvider'
 import { VscAccount } from "react-icons/vsc";
-import StarRating from '../Modal/StartRating'
+import StarRating from '../Modal/StarRating';
 
 const Reseñas = () => {
   const { user } = useAuth();
@@ -41,7 +41,7 @@ const Reseñas = () => {
   };
 
   const eliminarReseña = async (id) => {
-    const res = await fetch(${import.meta.env.VITE_URL_REVIEWS}/${id}, {
+    const res = await fetch(`${import.meta.env.VITE_URL_REVIEWS}/${id}`, {
       method: 'DELETE',
     });
     if (res.status === 200) {
