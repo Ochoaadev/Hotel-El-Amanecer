@@ -50,7 +50,6 @@ const ListarHabitFilter = async (req, res) => {
     const regex = new RegExp(valor, 'i');
 
     const room = await model.find({ [filtro]: regex })
-    console.log(room)
     res.status(200).json(room);
   } catch (erro) {
     res.status(500).json({ message: 'Error al intentar listar las habitaciones', status: 500 })
