@@ -13,12 +13,12 @@ const rooms = new mongoose.Schema({
     required: true,
   },
   Comodidad: {
-    type: String,
+    type: Array,
     required: true,
   },
   Tarifa: {
     type: String,
-    required: true,
+    required: true, 
   },
   Review: {
     type: String
