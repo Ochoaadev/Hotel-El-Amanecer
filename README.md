@@ -23,8 +23,9 @@
 
 # Funcionalidades
 
-- Realizar reservas
-- Recibir notificación por correo sobre confirmación de reserva
+- Realizar reservas.
+- Acceso para clientes como para administradores. Los administradores tiene la potestad de ajustar el contenido de la pagina.
+- Recibir notificación por correo sobre confirmación de reserva.
 
 # Instrucciones
 
