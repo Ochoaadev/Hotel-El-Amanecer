@@ -53,7 +53,7 @@ const Room = () => {
           <h2 className="text-2xl font-bold">Promoción de Habitaciones</h2>
           <p>¡Descubre nuestras increíbles habitaciones y reserva ahora!</p>
         </div>
-        <Search 
+        <Search
           setSearchValue={setSearchValue}
           onFilterChange={handleFilterChange} // Pasar la función de cambio de filtro al componente de búsqueda
         />
@@ -131,7 +131,10 @@ const Room = () => {
                         <div className="flex flex-1 items-end justify-end">
                           <Link
                             className="bg-marron text-white rounded-md font-bold py-2 px-4"
-                            to={"/"}
+                            to={{
+                              pathname: "/Reservas",
+                              state: { roomData: room }
+                            }}
                           >
                             Reservar
                           </Link>
