@@ -5,6 +5,8 @@ import Footer from '../../components/Footer'
 import Carrusel from '../../components/Home/carrusel'
 import { useLocation } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthProvider";
+import Reseñas from "../../components/Home/review"
+import Weather from "../../components/Home/time"
 
 function MiHotel() {
   const location = useLocation();
@@ -15,6 +17,8 @@ function MiHotel() {
       <Info />
       <Advanced />
       <Carrusel />
+      <Reseñas/>
+      <Weather/>
       <Footer />
     </>
   );

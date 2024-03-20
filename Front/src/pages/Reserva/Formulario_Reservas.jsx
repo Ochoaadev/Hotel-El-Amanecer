@@ -1,12 +1,17 @@
-import React, {useState, useEffect} from "react";
+import {useState, useEffect} from "react";
 import Message from "../../components/Modal/Message";
 import Header from '../../components/Header';
 import Footer from '../../components/Footer'
+import { useLocation } from "react-router";
 import { useItemsContext, useUpItemsContext } from "../../contexts/UpProvider";
 
 function Form_reservas (){
    const { setMessage, setStatus, handleOpenMessage } = useItemsContext();
    const update = useUpItemsContext();
+
+   const location = useLocation();
+   const roomData = location.state?.roomData;
+
    const [InputDNI, SetInputDNI ] = useState();
    const [InputNombre_Apellido, SetInputNombre_Apellido ] = useState();
    const [InputEmail, SetInputEmail ] = useState();
@@ -14,6 +19,7 @@ function Form_reservas (){
    const [InputFecha_llegada, SetInputFecha_llegada ] = useState();
    const [InputFecha_Salida, SetInputFecha_Salida ] = useState();
    const [InputCantidad_Persona, SetInputCantidad_Persona] = useState();
+   const [InputHabitacion, SetInputHabitacion] = useState(roomData?.Tipo || '');
    const [InputPregunta, SetInputPregunta ] = useState();
    
    const handleInputDNI = (event) => {
@@ -38,6 +44,9 @@ function Form_reservas (){
    }
    const handleInputCantidad_Persona = (event) => {
       SetInputCantidad_Persona(event.target.value);
+   }
+   const handleInputHabitacion = (event) => {
+      SetInputHabitacion(event.target.value);
    }
    const handleInputPregunta = (event) => {
       SetInputPregunta(event.target.value);
@@ -169,6 +178,18 @@ const Add_Reservas = async (event) => {
                 id="CargaF"
                 value={InputCantidad_Persona}
                 onChange={handleInputCantidad_Persona}
+              />
+            </label>
+          </div>
+          <div className="flex flex-col ">
+            <label htmlFor="room" className="mb-2">
+              Tipo de Habitacion
+              <input
+                className="rounded-lg border border-black w-full"
+                type="text"
+                id="room"
+                value={InputHabitacion}
+                onChange={handleInputHabitacion}
               />
             </label>
           </div>
