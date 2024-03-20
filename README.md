@@ -1,5 +1,5 @@
 #  # Proyecto: Hotel El Amanecer
-  Actividad 3.1 Front End II
+  Pagina web del Hotel El Amanecer ubicado en San Cristóbal, Venezuela. En la que permite navegar y conocer sus productos, habitaciones y servicios que ofrece, además de poder realizar reservas.
 
 # Integrantes
 
@@ -82,8 +82,11 @@ FrontEnd
 Ahora solo tienes que copiar el enlace que se te da por consola en tu buscador, ¡y ya puedes empezar a disfrutar de la app!
 
 # Video explicando código
-
-https://www.youtube.com/watch?v=GU4Xgk7Dgww
+ -Primera entrega:
+  https://www.youtube.com/watch?v=GU4Xgk7Dgww
+  
+ -Segunda entrega:
+ https://youtu.be/9mfv4z98qtA?si=A2x7ar4g6KcGtwe_
 
 # Figma
 
